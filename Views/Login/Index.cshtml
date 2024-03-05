@@ -1,0 +1,21 @@
+﻿﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row">
+        <h1 id="title" class="mb-5">ExpediPro</h1>
+        <div class="d-flex flex-column row mt-3">
+            <div class="bg-light w-25 d-flex flex-column justify-content-center rounded" style="left: 4em; bottom: 4em; height: 40%">
+                <h4>Dov'è la mia spedizione?</h4>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex mb-2 mt-1" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Numero spedizione" aria-label="Search">
+                        <button class="btn btn-outline-danger" type="submit">Cerca</button>
+                    </form>
+                </div>
+                <a href="@Url.Action("CercaSpedizione", "Spedizione")" class="text-decoration-none text-black">Ricerca Avanzata ></a>
+            </div>
+        </div>
+    </section>
+</main>

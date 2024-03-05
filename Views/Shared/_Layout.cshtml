@@ -16,9 +16,9 @@
                 <div class="d-flex">
                     @if (User.IsInRole("Admin"))
                     {
-                        @Html.ActionLink("Cerca Spedizioni", "CercaSpedizione", "Spedizione", new { area = "" }, new { @class = "nav-link mx-3 text-light" });
-                        @Html.ActionLink("Gestione Clienti", "ListaCliente", "Cliente", new { area = "" }, new { @class = "nav-link mx-3 text-light" });
-                        @Html.ActionLink("Gestione Spedizione", "ListaSpedizione", "Spedizione", new { area = "" }, new { @class = "nav-link mx-3 text-light" });
+                        @Html.ActionLink("Cerca Spedizioni", "CercaSpedizione", "Spedizione", new { area = "" }, new { @class = "nav-link mx-3 text-white" });
+                        @Html.ActionLink("Gestione Clienti", "ListaCliente", "Cliente", new { area = "" }, new { @class = "nav-link mx-3 text-white" });
+                        @Html.ActionLink("Gestione Spedizione", "ListaSpedizione", "Spedizione", new { area = "" }, new { @class = "nav-link mx-3 text-white" });
 
                     }
                     else
@@ -32,12 +32,12 @@
                     {
                         <ul style="list-style: none" class="m-0 p-0">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Ciao @User.Identity.Name
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li>@Html.ActionLink("Profilo", "Profilo", "Login", new { area = "" }, new { @class = "dropdown-item text-light" })</li>
-                                    <li>@Html.ActionLink("Logout", "Logout", "Login", new { area = "" }, new { @class = "dropdown-item text-light" })</li>
+                                    <li>@Html.ActionLink("Profilo", "Profilo", "Login", new { area = "" }, new { @class = "dropdown-item text-dark" })</li>
+                                    <li>@Html.ActionLink("Logout", "Logout", "Login", new { area = "" }, new { @class = "dropdown-item text-dark" })</li>
                                 </ul>
                             </li>
                         </ul>
