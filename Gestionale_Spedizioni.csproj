@@ -198,6 +198,7 @@
     <Content Include="Views\Cliente\AggiungiCliente.cshtml" />
     <Content Include="Views\Cliente\ListaCliente.cshtml" />
     <Content Include="Views\Cliente\ModificaCliente.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -46,7 +46,7 @@ namespace Gestionale_Spedizioni.Models
 
             sqlConnection.Open();
 
-            string query = "SELECT Role FROM Login WHERE Username = @Username";
+            string query = "SELECT IsAdmin FROM Login WHERE Username = @Username";
 
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             sqlCommand.Parameters.AddWithValue("Username", username);
@@ -57,12 +57,13 @@ namespace Gestionale_Spedizioni.Models
 
             while (reader.Read())
             {
-                string role = reader["Role"].ToString();
-                roles.Add(role);
+                bool isAdmin = (bool)reader["IsAdmin"];
+                roles.Add(isAdmin ? "Admin" : "User");
             }
 
             return roles.ToArray();
         }
+
 
         public override string[] GetUsersInRole(string roleName)
         {
