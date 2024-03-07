@@ -24,7 +24,7 @@ namespace Gestionale_Spedizioni.Controllers
             using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 sqlConnection.Open();
-                string query = "SELECT * FROM Spedizioni WHERE Id = @Id";
+                string query = "SELECT * FROM Spedizione WHERE Id = @Id";
 
                 using (SqlCommand cmd = new SqlCommand(query, sqlConnection))
                 {
@@ -267,7 +267,7 @@ namespace Gestionale_Spedizioni.Controllers
         {
             if (ModelState.IsValid)
             {
-                string query = "SELECT * FROM Spedizioni WHERE Mittente = @Mittente AND CodiceSpedizione = @CodiceSpedizione";
+                string query = "SELECT * FROM Spedizione WHERE Mittente = @Mittente AND CodiceSpedizione = @CodiceSpedizione";
 
                 using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
                 {
